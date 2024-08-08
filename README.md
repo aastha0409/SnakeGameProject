@@ -1,0 +1,1 @@
+This project is a classic Snake Game implemented using HTML, CSS, and JavaScript. The goal of the game is to control a snake as it navigates a grid, consuming food to grow longer while avoiding collisions with the walls or itself.
