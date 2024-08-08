@@ -1,0 +1,40 @@
+<html>
+
+<body>
+    Enter the string: <input type="text" id="instr"><br><br>
+    <button type="button" onclick="check()">Submit</button>
+    <div id="div1"></div>
+    <script>
+        function check() {
+            const vowels = ["a", "e", "i", "o", "u"];
+            var str = document.getElementById("instr").value;
+            let vcount = 0;
+            let ccount = 0;
+            let charcount = 0;
+            let wordcount = 1;
+            for (let letter of str.toLowerCase()) {
+                if (letter == " ") {
+                    wordcount++;
+                }
+                else {
+                    charcount++;
+                }
+                if (vowels.includes(letter)) {
+                    vcount++;
+                }
+                else if (letter == " ") { }
+                else {
+                    ccount++;
+                }
+            }
+            document.getElementById("div1").insertAdjacentText("beforeend", "Number of Words are = " + wordcount);
+            document.getElementById("div1").appendChild(document.createElement('br'));
+            document.getElementById("div1").insertAdjacentText("beforeend", "Number of Character are = " + charcount);
+            document.getElementById("div1").appendChild(document.createElement('br'));
+            document.getElementById("div1").insertAdjacentText("beforeend", "Number of Vowels are = " + vcount);
+            document.getElementById("div1").appendChild(document.createElement('br'));
+            document.getElementById("div1").insertAdjacentText("beforeend", "Number of Consonents are = " + ccount);
+        }
+    </script>
+</body>
+</html>
